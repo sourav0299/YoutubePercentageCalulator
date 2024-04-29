@@ -1,4 +1,3 @@
-// Function to calculate the percentage watched
 function calculatePercentageWatched() {
     const video = document.querySelector('video');
     if (video) {
@@ -11,8 +10,6 @@ function calculatePercentageWatched() {
     }
     return 0;
 }
-
-// Function to update the percentage watched text
 function updatePercentageWatched() {
     const percentage = calculatePercentageWatched();
     let percentageText = document.getElementById('ytWatchPercentage');
@@ -28,9 +25,5 @@ function updatePercentageWatched() {
     }
     percentageText.textContent = `${percentage}% watched`;
 }
-
-// Update the percentage watched when the video time changes
 document.querySelector('video').addEventListener('timeupdate', updatePercentageWatched);
-
-// Initial update
 updatePercentageWatched();
