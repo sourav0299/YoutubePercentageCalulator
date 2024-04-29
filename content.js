@@ -6,7 +6,7 @@ function calculatePercentageWatched() {
         const duration = video.duration;
         if (duration > 0) {
             const percentage = (currentTime / duration) * 100;
-            return percentage.toFixed(1); // Limit to one decimal place
+            return percentage.toFixed(2); // Limit to one decimal place
         }
     }
     return 0;
